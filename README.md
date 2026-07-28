@@ -221,3 +221,25 @@ Map dynamic body tokens (FullName, Email, JobTitle) and sanitize mailNickname.
 Save, publish, and trigger the workflow endpoint using Postman.
 
 Save, publish, and trigger the workflow endpoint using Postman.
+
+---
+
+## 📸 Screenshots & Workflow Validation
+
+### 1. Logic App Workflow
+![Logic App Workflow](Screenshots/Workflow.png)
+
+### 2. API Request (Postman)
+![Postman Request](Screenshots/Postman_Post.png)
+
+### 3. API Response
+![API Response](Screenshots/Response.png)
+
+### 4. Azure Run History
+![Run History](Screenshots/Run_History.png)
+
+### 5. Microsoft Entra ID - Created User
+![Entra ID User View](Screenshots/View_from_entra.png)
+
+### 6. Entra ID - Group Assignment
+![Entra ID Groups](Screenshots/Groups.png)
