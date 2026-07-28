@@ -32,7 +32,6 @@ An automated, event-driven Joiner-Mover-Leaver (JML) identity pipeline built wit
   "Department": "IT",
   "JobTitle": "Security Analyst"
 }
-
 🔍 Engineering & Troubleshooting Log
 A key part of developing this pipeline involved diagnosing and resolving several real-world API edge cases:
 
@@ -55,6 +54,12 @@ Solution: Validated identity constraint handling by dynamically varying email pr
 Create an Azure Logic App (Consumption) in the Azure Portal.
 
 Add the When an HTTP request is received trigger and define the expected JSON schema.
+
+Add the Microsoft Entra ID - Create user action and authenticate with appropriate administrative credentials (User Administrator / Global Administrator).
+
+Map dynamic body tokens (FullName, Email, JobTitle) and sanitize mailNickname.
+
+Save, publish, and trigger the workflow endpoint using Postman.
 
 Add the Microsoft Entra ID - Create user action and authenticate with appropriate administrative credentials (User Administrator / Global Administrator).
 
