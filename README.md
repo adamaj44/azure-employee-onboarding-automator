@@ -1,31 +1,25 @@
-# Azure Automated Employee Onboarding Pipeline
+📌 Architecture Overview
+HTTP Trigger: Receives an HTTP POST request containing structured JSON user data (FullName, Email, Department, JobTitle).
 
-An automated, event-driven Joiner-Mover-Leaver (JML) identity pipeline built with **Azure Logic Apps** and **Microsoft Entra ID (Azure AD)**. This project receives HTTP POST payloads containing new hire details, programmatically provisions user accounts in Entra ID with sanitized attributes, and dynamically routes users to departmental security groups.
+Identity Provisioning: Programmatically creates the user account in Microsoft Entra ID with sanitized attributes.
 
----
+Control Logic: Evaluates the Department parameter using a Switch control block.
 
-## 📌 Architecture Overview
+Group Assignment: Automatically assigns the user to their respective departmental security group.
 
-1. **HTTP Trigger:** Receives an HTTP POST request containing structured JSON user data (`FullName`, `Email`, `Department`, `JobTitle`).
-2. **Identity Provisioning:** Programmatically creates the user account in **Microsoft Entra ID** with sanitized attributes.
-3. **Control Logic:** Evaluates the `Department` parameter using a **Switch** control block.
-4. **Group Assignment:** Automatically assigns the user to their respective departmental security group.
-5. **Response:** Delivers an HTTP response status code (`200 OK` or `400 Bad Request`).
+Response: Delivers an HTTP response status code (200 OK or 400 Bad Request).
 
----
+🛠️ Tech Stack & Prerequisites
+Cloud Platform: Microsoft Azure
 
-## 🛠️ Tech Stack & Prerequisites
+Services: Azure Logic Apps (Consumption), Microsoft Entra ID (Azure AD)
 
-* **Cloud Platform:** Microsoft Azure
-* **Services:** Azure Logic Apps (Consumption), Microsoft Entra ID (Azure AD)
-* **API Client:** Postman
-* **Protocols & Formats:** REST API, HTTP POST, JSON Schema
+API Client: Postman
 
----
+Protocols & Formats: REST API, HTTP POST, JSON Schema
 
-## 📥 Sample Request Payload
-
-```json
+📥 Sample Request Payload
+JSON
 {
   "FullName": "Alex Turner",
   "Email": "aturner@adamantojosegmail.onmicrosoft.com",
@@ -60,9 +54,5 @@ Add the Microsoft Entra ID - Create user action and authenticate with appropriat
 Map dynamic body tokens (FullName, Email, JobTitle) and sanitize mailNickname.
 
 Save, publish, and trigger the workflow endpoint using Postman.
-
-Add the Microsoft Entra ID - Create user action and authenticate with appropriate administrative credentials (User Administrator / Global Administrator).
-
-Map dynamic body tokens (FullName, Email, JobTitle) and sanitize mailNickname.
 
 Save, publish, and trigger the workflow endpoint using Postman.
