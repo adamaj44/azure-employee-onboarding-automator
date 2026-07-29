@@ -220,7 +220,7 @@ Map dynamic body tokens (FullName, Email, JobTitle) and sanitize mailNickname.
 
 Save, publish, and trigger the workflow endpoint using Postman.
 
-Save, publish, and trigger the workflow endpoint using Postman.
+
 
 ---
 
